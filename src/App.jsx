@@ -19,7 +19,7 @@ function IntroSection() {
     link: "article-link",
   };
   return (
-    <div>
+    <div className={articleStyles.container}>
       <h3 className={articleStyles.title}>TechUp Thailand</h3>
       <p className={articleStyles.body}>
         เตรียมพบกับหลักสูตรปั้นคุณเป็น Software Developer ภายใน 4 เดือน
@@ -44,9 +44,9 @@ function LoginForm() {
     <div className="login-container">
       <form className="login-form">
         <h2>Login</h2>
-        <label for="username">Username</label>
+        <label htmlFor="username">Username</label>
         <input type="text" id="username" name="username" />
-        <label for="password">Password</label>
+        <label htmlFor="password">Password</label>
         <input type="password" id="password" name="password" />
         <button type="submit">Login</button>
       </form>
@@ -56,10 +56,12 @@ function LoginForm() {
 
 function App() {
   return (
-    <div className="app">
-      <IntroSection />
-      <LoginForm />
-    </div>
+    <>
+      <div className="app">
+        <IntroSection />
+        <LoginForm />
+      </div>
+    </>
   );
 }
 
