@@ -24,6 +24,7 @@ function IntroSection() {
       <a href="https://www.techupth.com/" target="blank" className={articleStyles.link}>
         techupth.com
       </a>
+      <div className="bootcamp-start-time">วันเวลาเริ่มหลักสูตร คือ ({getCurrentDateTime()})</div>
     </div>
   );
 }
@@ -48,7 +49,7 @@ function App() {
     <div className="app">
       <IntroSection />
       <LoginForm />
-      <div className="bootcamp-start-time">วันเวลาเริ่มหลักสูตร คือ ({getCurrentDateTime()})</div>
+      
     </div>
   );
 }
