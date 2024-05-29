@@ -12,22 +12,37 @@ function getCurrentDateTime() {
 }
 
 function IntroSection() {
+  const articleStyles = {
+    container: "article",
+    title: "article-title",
+    body: "article-body",
+    link: "article-link",
+  };
   return (
     <div>
-      <h3>TechUp Thailand</h3>
-      <p>เตรียมพบกับหลักสูตรปั้นคุณเป็น Software Developer ภายใน 4 เดือน</p>
-      <a href="https://www.techupth.com/" target="blank">
+      <h3 className={articleStyles.title}>TechUp Thailand</h3>
+      <p className={articleStyles.body}>
+        เตรียมพบกับหลักสูตรปั้นคุณเป็น Software Developer ภายใน 4 เดือน
+      </p>
+      <a
+        className={articleStyles.link}
+        href="https://www.techupth.com/"
+        target="blank"
+      >
         techupth.com
       </a>
       {/* ให้แสดงวันเวลาด้วย Function `getCurrentDateTime` ที่กำหนดไว้ให้ */}
+      <div className="bootcamp-start-time">
+        วันเวลาเริ่มหลักสูตร คือ {getCurrentDateTime()}{" "}
+      </div>
     </div>
   );
 }
 
 function LoginForm() {
   return (
-    <div class="login-container">
-      <form class="login-form">
+    <div className="login-container">
+      <form className="login-form">
         <h2>Login</h2>
         <label for="username">Username</label>
         <input type="text" id="username" name="username" />
